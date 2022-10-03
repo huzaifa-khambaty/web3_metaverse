@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Getting Started Exercises with JavaScript and Node.js</h1>
+<p>Q3: Name Cases: Store a person’s name in a variable, 
+    and then print that person’s name in lowercase, uppercase, and titlecase</p>
+<p>&nbsp;</p>
+<p>Solution</p>
+<blockquote style="background-color: lightgrey;">
+    <p>let person_name = "HUZAIFA khambaty";<br />
+    let lc_name = person_name.toLowerCase();<br />
+    let uc_name = person_name.toUpperCase();<br />
+    function titleCase(string) {<br />
+        var sentence = string.toLowerCase().split(" ");<br />
+        for(var i = 0; i< sentence.length; i++){<br />
+            sentence[i] = sentence[i][0].toUpperCase() + sentence[i].slice(1);<br />
+        }<br />
+        return sentence.join(" ");<br />
+    }<br />
+    let tc_name = titleCase(person_name);<br />
+    console.log('person_name:' + person_name);<br />
+    console.log('lower_case:' + lc_name);<br />
+    console.log('upper_case:' + uc_name);<br />
+    console.log('title_case:' + tc_name);<br />
+    alert('person_name: ' + person_name+', lowera_case: '+lc_name+', upper_case: '+uc_name+', title_case: ' + tc_name);</p>
+</blockquote>
+</body>
+<script>
+    let person_name = "HUZAIFA khambaty";
+    let lc_name = person_name.toLowerCase();
+    let uc_name = person_name.toUpperCase();
+    
+    function titleCase(string) {
+      var sentence = string.toLowerCase().split(" ");
+      for(var i = 0; i< sentence.length; i++){
+         sentence[i] = sentence[i][0].toUpperCase() + sentence[i].slice(1);
+      }
+
+      return sentence.join(" ");
+    }
+
+    let tc_name = titleCase(person_name);
+
+    console.log('person_name:' + person_name);
+    console.log('lower_case:' + lc_name);
+    console.log('upper_case:' + uc_name);
+    console.log('title_case:' + tc_name);
+    alert('person_name: ' + person_name+', lowera_case: '+lc_name+', upper_case: '+uc_name+', title_case: ' + tc_name);
+</script>
+</html> 

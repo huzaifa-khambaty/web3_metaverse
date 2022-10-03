@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Getting Started Exercises with JavaScript and Node.js</h1>
+<p>Q14: Guest List: If you could invite anyone, living or deceased, to dinner, who would you invite? 
+    Make a list that includes at least three people you’d like to invite to dinner. 
+    Then use your list to print a message to each person, inviting them to dinner.</p>
+<p>Q15: Changing Guest List: You just heard that one of your guests can’t make the dinner, 
+    so you need to send out a new set of invitations. 
+    You’ll have to think of someone else to invite.</p>
+    <p>&nbsp;</p>
+<p>Solution</p>
+<blockquote style="background-color: lightgrey;padding: 15px;">
+    <code>
+        // Adding statements in array <br />
+        let guests = [ <br />
+            'Hatim', <br />
+            'Mufaddal', <br />
+            'Ammar', <br />
+        ]; <br />
+    
+        //looping stetements from array <br />
+        for(i = 0; i < guests.length; i++) { <br />
+            document.write("Inviting: " + guests[i]); // Printing invited guest <br />
+        } <br />
+    
+        document.write(guests[2]+" is not coming."); <br />
+    
+        guests[2] = "Zeeshan"; <br />
+    
+        document.write("New invitation ...."); <br />
+        //looping stetements from array <br />
+        for(i = 0; i < guests.length; i++) { <br />
+            document.write("Inviting: " + guests[i]); // Printing invited guest <br />
+        }
+        // Q16: More Guests
+        document.write("Q16=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=Q16<br />");
+        document.write("Bigger Dinner Table found.<br />");
+        guests.unshift("Mohsin"); // Adding One New Guest to the beginning
+        guests.splice(2,0,"Moiz"); // Adding One New Guest to the middle
+        guests.push("Zahid"); // Adding One New Guest to the end
+        for(i = 0; i < guests.length; i++) {
+            document.write("Inviting: " + guests[i]+"<br />"); // Printing invited guest
+        }
+        
+        // Q17: Shrinking Guests List <br />
+        document.write("Q17=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=Q17"); <br />
+        document.write("Only able to invite 2 Guests."); <br />
+        let total_guests = guests.length; <br />
+        for(i = 0; i < (total_guests-2); i++) { <br />
+            removed_guest = guests.shift(); <br />
+            document.write("Dear " + removed_guest+", Your invitation cancelled.>"); // Printing removed guest <br />
+        } <br />
+        for(i = 0; i < guests.length; i++) { <br />
+            document.write("Dear " + guests[i]+", Your are still invited."); // Printing invited guest <br />
+        } <br />
+        guests.shift(); <br />
+        guests.shift(); <br />
+        document.write("Current Guests List is " + guests.join(', ')); <br />
+    </code>
+</blockquote>
+</body>
+<script>
+    // Adding statements in array
+    let guests = [
+        'Hatim',
+        'Mufaddal',
+        'Ammar',
+    ];
+
+    //looping stetements from array
+    for(i = 0; i < guests.length; i++) {
+        document.write("Inviting: " + guests[i]+"<br />"); // Printing invited guest
+    }
+
+    // Q15: Changing Guest List
+    document.write("Q15=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=Q15<br />");
+    document.write(guests[2]+" is not coming.<br />");
+
+    guests[2] = "Zeeshan";
+
+    document.write("New invitation ....<br />");
+    //looping stetements from array
+    for(i = 0; i < guests.length; i++) {
+        document.write("Inviting: " + guests[i]+"<br />"); // Printing invited guest
+    }
+    
+    // Q16: More Guests
+    document.write("Q16=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=Q16<br />");
+    document.write("Bigger Dinner Table found.<br />");
+    guests.unshift("Mohsin"); // Adding One New Guest to the beginning
+    guests.splice(2,0,"Moiz"); // Adding One New Guest to the middle
+    guests.push("Zahid"); // Adding One New Guest to the end
+    for(i = 0; i < guests.length; i++) {
+        document.write("Inviting: " + guests[i]+"<br />"); // Printing invited guest
+    }
+    
+    // Q17: Shrinking Guests List
+    document.write("Q17=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=Q17<br />");
+    document.write("Only able to invite 2 Guests.<br />");
+    let total_guests = guests.length;
+    for(i = 0; i < (total_guests-2); i++) {
+        removed_guest = guests.shift();
+        document.write("Dear " + removed_guest+", Your invitation cancelled.<br />"); // Printing removed guest
+
+    }
+    for(i = 0; i < guests.length; i++) {
+        document.write("Dear " + guests[i]+", Your are still invited.<br />"); // Printing invited guest
+    }
+    guests.shift();
+    guests.shift();
+    document.write("Current Guests List is " + guests.join(', ')+".<br />");
+</script>
+</html> 
